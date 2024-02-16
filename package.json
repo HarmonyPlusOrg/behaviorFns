@@ -1,0 +1,24 @@
+{
+  "name": "behaviorfns",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HarmonyPlusOrg/behaviorFns.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HarmonyPlusOrg/behaviorFns/issues"
+  },
+  "homepage": "https://github.com/HarmonyPlusOrg/behaviorFns#readme",
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
