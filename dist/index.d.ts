@@ -1,4 +1,4 @@
-export declare const behaviorFns: Record<string, (paramPrice: number, productSize: {
+export declare const calcFns: Record<string, (paramPrice: number, productSize: {
     width: number;
     height: number;
     depth: number;

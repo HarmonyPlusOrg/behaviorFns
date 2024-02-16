@@ -1,4 +1,4 @@
-export const behaviorFns: Record<
+export const calcFns: Record<
   string,
   (
     paramPrice: number,
