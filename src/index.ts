@@ -3,11 +3,15 @@ export const calcFns: Record<
   (
     paramPrice: number,
     productSize: { width: number; height: number; depth: number },
-    paramValue: number
+    paramValue: number | string
   ) => number
 > = {
-  'W*H*Param_cost': (paramPrice, size) => size.width * size.height * paramPrice,
-  'Price per inclusion': (paramPrice) => paramPrice,
+  'W*H*Param_cost': (paramPrice, size, paramValue) =>
+    paramValue === 'true' ? size.width * size.height * paramPrice : 0,
+  'Price per inclusion': (paramPrice, size, paramValue) =>
+    paramValue === 'true' ? paramPrice : 0,
   'W*H*Param_cost*Param_value': (paramPrice, size, paramValue) =>
-    size.width * size.height * paramPrice * paramValue,
+    typeof paramValue === 'number'
+      ? size.width * size.height * paramPrice * paramValue
+      : 0,
 }
